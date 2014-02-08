@@ -1,0 +1,18 @@
+<div>
+    <h1>Make Newsletter</h1>
+    <p class="lead">
+        Put together a cool newsletter.
+    </p>
+    <div ng-repeat="article in newsletter.articles">
+        <input class="form-control" type="text" ng-model="article.header" placeholder="Article Title">
+        <textarea class="form-control" ng-model="article.text" placeholder="Article Text"></textarea>
+    </div>
+    <button class="btn btn-primary" ng-click="addArticle()">Add Article</button>
+    <hr>
+    <div ng-repeat="event in newsletter.events">
+        <input class="form-control" type="text" ng-model="event.header" placeholder="Event Title">
+        <input type="date" ng-model="event.date">
+        <textarea class="form-control" ng-model="event.text" placeholder="Event Text"></textarea>
+    </div>
+    <button class="btn btn-primary" ng-click="addEvent()">Add Event</button>
+</div>
